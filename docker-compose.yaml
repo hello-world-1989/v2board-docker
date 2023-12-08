@@ -12,12 +12,12 @@ services:
     ports:
       - '80:80'
       - '443:443'
-    restart: always
+    restart: unless-stopped
   mysql:
     image: mysql:5.7.29
     volumes:
       - './mysql:/var/lib/mysql'
-    restart: always
+    restart: unless-stopped
     environment: 
       MYSQL_ROOT_PASSWORD: v2boardisbest
       MYSQL_DATABASE: v2board
