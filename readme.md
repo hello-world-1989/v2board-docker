@@ -104,7 +104,7 @@ mysqldump -u root -pnewpassword v2board > backup.sql
 exit
 
 #主机中执行inside host
-dc cp mysql:/backup.sql .
+sudo docker cp ubuntu_mysql_1:/backup.sql .
 ```
 
 如果你运行在AWS 上， 你可以备份到S3
